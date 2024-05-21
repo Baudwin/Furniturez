@@ -5,6 +5,8 @@ import { BannerGrid } from '../../components/BannerGrid'
 import { ProductCarousel } from '../../components/ProductCarousel'
 import { Values } from '../../components/Values'
 import { BannerSection } from '../../components/BannerSection'
+import { Articles } from '../../components/Articles'
+import { Newsletter } from '../../components/Newsletter'
 
 export const Home = () => {
   return (
@@ -16,6 +18,8 @@ export const Home = () => {
     <ProductCarousel/>
     <Values/>
     <BannerSection/>
+    <Articles/>
+    <Newsletter/>
     </div>
     
     </>

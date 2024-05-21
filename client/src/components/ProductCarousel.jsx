@@ -1,5 +1,8 @@
 import React from 'react'
 import products from '../new-arrivals'
+import { FaStar } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
+import { FiArrowRight } from 'react-icons/fi'
 
 export const ProductCarousel = () => {
   return (
@@ -7,14 +10,18 @@ export const ProductCarousel = () => {
     <div className='space-y-5 container sm:px-8' >
     <div className='flex justify-between'>
         <h1 className='font-semibold text-2xl'>New <br/> Arrivals</h1>
-        <a className='text-black text-sm  place-self-end underline' href="">More Products </a>
+        <div className='flex items-center place-self-end gap-1'>
+           <Link className='text-black text-sm  underline'>More Products </Link> 
+           <FiArrowRight className='mt-0.5'/>
+        </div>
+        
     </div>
 
 <div className='grid grid-cols-4 sm:grid-cols-2 gap-3'>
 
    {
     products.map(product=>{
-        return <div className='space-y-' key={product}>
+        return <div className='space-y-2' key={product.id}>
           <div className='bg-gray-100 p-3 lg:space-y-3 xl:space-x-3'>
             <div className='flex flex-col gap-1'>
                 <span className='text-black w-fit rounded font-semibold uppercase px-2 text-sm bg-white'>new</span>
@@ -27,11 +34,18 @@ export const ProductCarousel = () => {
             
             </div>  
             <div className='flex flex-col'>
-                <span>x x x x x</span>
+                <div className='flex gap-1'>
+                    {
+                [1,2,3,4,5].map(rating=>{
+                 return <FaStar key={rating} size={12}/>   
+                })
+               }   
+                </div>
+
                 <span className='text-sm font-medium'>{product.name}</span>
                 <div className='flex gap-2'>
                 <span className='text-sm font-medium'>{product.currentPrice}</span>
-                    <span className='text-gray-400 line-through'>{product.prevPrice}</span>
+                    <span className='text-gray-400 line-through text-sm'>{product.prevPrice}</span>
                 </div>
             </div>
 
