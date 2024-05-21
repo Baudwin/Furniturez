@@ -1,16 +1,17 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
-import {FiMenu, FiSearch, FiShoppingBag, FiShoppingCart, FiUser} from 'react-icons/fi'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
+import {FiMenu, FiSearch,  FiShoppingCart, FiUser} from 'react-icons/fi'
 
 
 export const Navbar = () => {
+    const navigate = useNavigate()
   return (
-    <div className='container sm:px-8'>
+    <div className='container sm:px-8 sm:py-2'>
         <header className='py-2'>
             <nav className='flex justify-between items-center'>
                 <div className='flex items-center gap-2'>
                     <FiMenu size={27} className='hidden sm:block'/>
-                   <h1 className='text-2xl sm:text-xl font-bold'>Furniturez.</h1>  
+                   <Link to={'/'} className='text-2xl sm:text-xl font-bold'>Furniturez.</Link>  
                 </div>
                
             <ul className='flex sm:hidden gap-4 text-sm text-gray-700'>
@@ -31,10 +32,12 @@ export const Navbar = () => {
                 <div className='flex items-center gap-2'>
                 {/* <FiMenu/> */}
                 <FiSearch className='sm:hidden'/>
-                <FiUser size={20}/>
+                <FiUser className=' cursor-pointer' onClick={()=>navigate('/profile')} size={19}/>
                 <div className='flex gap-1 items-center'>
-                  <FiShoppingCart size={20}/>  
-                  <span className='bg-black text-white rounded-full h-5.5 w-5 text-center font-bold'>0</span>
+                  <FiShoppingCart size={19}/>  
+                  <div className='bg-black flex justify-center items-center text-white rounded-full h-4 w-4  font-semibold'>
+                   <span className='text-sm'>0</span>
+                </div>
                 </div>
                 
                 </div>

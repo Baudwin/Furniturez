@@ -1,0 +1,7 @@
+.profile-nav a.active{
+    @apply border-b border-black font-medium text-black
+}
+
+.profile-nav a{
+    @apply text-gray-500 py-1.5
+}

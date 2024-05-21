@@ -3,6 +3,11 @@ import products from '../new-arrivals'
 import { FaStar } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import { FiArrowRight } from 'react-icons/fi'
+// import {Swiper, SwiperSlide} from 'swiper/react'
+// import 'swiper/css'
+// import {Pagination, Navigation} from 'swiper'
+// import 'swiper/components/navigation/navigation.min.css'
+
 
 export const ProductCarousel = () => {
   return (
