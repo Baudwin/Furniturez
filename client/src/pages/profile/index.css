@@ -5,3 +5,7 @@
 .profile-nav a{
     @apply text-gray-500 py-1.5
 }
+
+.profile-nav a:hover{
+    @apply text-black
+}

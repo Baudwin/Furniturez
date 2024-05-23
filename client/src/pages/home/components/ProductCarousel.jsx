@@ -1,5 +1,5 @@
 import React from 'react'
-import products from '../new-arrivals'
+import products from '../../../new-arrivals'
 import { FaStar } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import { FiArrowRight } from 'react-icons/fi'

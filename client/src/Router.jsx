@@ -7,6 +7,9 @@ import { AccountDetails } from './pages/profile/components/AccountDetails'
 import { Address } from './pages/profile/components/Address'
 import { Orders } from './pages/profile/components/Orders'
 import { Wishlist } from './pages/profile/components/Wishlist'
+import { Signup } from './pages/signup/signup'
+import { Shop } from './pages/shop/shop'
+import { ContactUs } from './pages/contact/contact-us'
 
 const router = createBrowserRouter([
  {
@@ -21,6 +24,11 @@ const router = createBrowserRouter([
         {
             path:'signin', 
             element:<Signin/>,
+            
+        },
+        {
+            path:'signup', 
+            element:<Signup/>,
             
         },
         {
@@ -50,7 +58,17 @@ const router = createBrowserRouter([
                 }
             ]
             
-        }
+        },
+        {
+            path:'shop', 
+            element:<Shop/>,
+            
+        },
+        {
+            path:'contact-us', 
+            element:<ContactUs/>,
+            
+        },
     ]
  }
 ])

@@ -1,11 +1,12 @@
 import React from 'react'
 import { FaCopyright } from 'react-icons/fa'
 import { FiFacebook, FiInstagram, FiYoutube } from 'react-icons/fi'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 export const Footer = () => {
+    const location = useLocation()
   return (
-    <div style={{backgroundColor:"#141718"}} className=' text-white sm:text-gray-400 py- px-10'>
+    <div style={{backgroundColor:"#141718"}} className={`${location.pathname ==='/signin'|| '/signup'?'block':'block'} text-white sm:text-gray-400 py- px-10`}>
 
 <div className='container'>
 

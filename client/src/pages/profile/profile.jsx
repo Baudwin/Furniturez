@@ -5,15 +5,15 @@ import './index.css'
 
 export const Profile = () => {
   return (
-    <div className=' sm:px-6'>
+    <div className=' sm:px-6 md:px-10'>
     <h1 className='text-center font-semibold text-3xl pt-5'>My Account</h1>
     <div className='container grid grid-cols-12 sm:grid-cols-1 gap-10 py-10'>
         
-        <nav className='lg:col-span-3 xl:col-span-3'>
+        <nav className='lg:col-span-3 xl:col-span-3 md:col-span-4'>
         <Navigation/>    
         </nav>
         
-        <main className=' xl:col-span-9 lg:col-span-9'>
+        <main className=' xl:col-span-9 lg:col-span-9 md:col-span-8'>
         <Outlet/>
         </main>
 
