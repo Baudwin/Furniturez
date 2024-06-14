@@ -12,13 +12,19 @@ import { FiArrowRight } from 'react-icons/fi'
 export const ProductCarousel = () => {
   return (
     <>
-    <div className='space-y-5 container sm:px-8' >
-    <div className='flex justify-between'>
+    <div className='space-y-3 container sm:px-8' >
+    <div className='flex justify-between items-center'>
         <h1 className='font-semibold text-2xl'>New <br/> Arrivals</h1>
-        <div className='flex items-center place-self-end gap-1'>
+
+        {/* <div className='flex items-center place-self-end gap-1'>
            <Link className='text-black text-sm  underline'>More Products </Link> 
            <FiArrowRight className='mt-0.5'/>
-        </div>
+        </div> */}
+
+<div className="flex w-fit items-center gap-1 border-b border-black">
+        <Link to={'/'} className="text-sm">More Products</Link>
+        <FiArrowRight/>
+    </div>
         
     </div>
 

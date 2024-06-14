@@ -10,6 +10,7 @@ import { Wishlist } from './pages/profile/components/Wishlist'
 import { Signup } from './pages/signup/signup'
 import { Shop } from './pages/shop/shop'
 import { ContactUs } from './pages/contact/contact-us'
+import { Cart } from './pages/cart/cart'
 
 const router = createBrowserRouter([
  {
@@ -62,6 +63,12 @@ const router = createBrowserRouter([
         {
             path:'shop', 
             element:<Shop/>,
+            children:[
+                {
+                    path:':productID',
+                    element:<AccountDetails/>,
+                },
+            ]
             
         },
         {
@@ -69,6 +76,11 @@ const router = createBrowserRouter([
             element:<ContactUs/>,
             
         },
+        {
+            path:'cart', 
+            element:<Cart/>,
+            
+        }
     ]
  }
 ])

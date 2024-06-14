@@ -1,6 +1,7 @@
 import React from 'react'
 import { FiArrowRight } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
+import { ShopNow } from '../../../components/ShopNow'
 
 export const BannerSection = () => {
   return (
@@ -13,10 +14,7 @@ export const BannerSection = () => {
                 <p className='text-gray-700 text-sm' >It's more affordable than ever to give every 
                   room in your home a stylish makeover</p>
 
-                <div className='flex items-center gap-1'>
-                  <Link className='text-sm underline'>Shop Now </Link>
-                  <FiArrowRight className='mt-0.5'/>
-                </div>
+                  <ShopNow/>
                   
             </div>
         </div>

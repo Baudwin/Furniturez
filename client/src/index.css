@@ -11,6 +11,15 @@
     @apply text-black 
     }
     
+.mobile-nav ul a{
+    @apply border-b-2
+}
+
+.mobile-nav ul a{
+    @apply py-3
+}
+
+
 
 .swiper {
   width: 100%;
